@@ -14,3 +14,6 @@ input.ip-time{
 .d-time > *{
 margin: 0px 5px;
 }
+#main >*{
+    margin: 5px 0;
+}

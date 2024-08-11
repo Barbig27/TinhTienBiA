@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <div class="container mt-5">
-        <div class="d-time" >
+    <div class="container mt-5" id="main">
+        <div class="d-time">
             <label for="gia" class="col-sm-2 col-form-label">Giá 1 giờ :</label>
-            <input style="width: 243px;" type="number" class="form-control ip-time" id="gia"  placeholder="Giá 1 giờ"> 
+            <input style="width: 243px;" type="number" class="form-control ip-time" id="gia" placeholder="Giá 1 giờ">
             <label for="gia" class="col-sm-2 col-form-label">VNĐ</label>
 
         </div>
@@ -22,31 +22,67 @@
         <div class="d-time">
             <label for="startHour" class="col-sm-2 col-form-label">Giờ Bắt Đầu :</label>
             <div>
-                <input value="00" type="number" class="form-control ip-time" id="startHour" maxlength="2" placeholder="Giờ"> 
+                <input value="00" type="number" class="form-control ip-time" id="startHour" maxlength="2"
+                    placeholder="Giờ">
                 <div style="position: relative;" id="startHourError" class="d-error form-text text-danger"></div>
             </div>
             <p style="font-size: 20px;">:</p>
             <div>
-                <input value="00" type="number" class="form-control ip-time" id="startMinute" maxlength="2" placeholder="Phút">
+                <input value="00" type="number"  class="form-control ip-time" id="startMinute" maxlength="2"
+                    placeholder="Phút">
                 <div id="startMinuteError" class="d-error form-text text-danger"></div>
             </div>
-            
+
         </div>
 
         <div class="d-time">
             <label for="endHour" class="col-sm-2 col-form-label">Giờ Kết Thúc :</label>
             <div>
-                <input value="00" type="number" class="form-control ip-time" id="endHour" maxlength="2" placeholder="Giờ">
+                <input value="00" type="number" class="form-control ip-time" id="endHour" maxlength="2"
+                    placeholder="Giờ">
                 <div id="endHourError" class="d-error form-text text-danger"></div>
             </div>
             <p style="font-size: 20px;">:</p>
-             <div>
-                <input value="00" type="number" class="form-control ip-time" id="endMinute" min="0" max="59" placeholder="Phút">
+            <div>
+                <input value="00" type="number" class="form-control ip-time" id="endMinute" min="0" max="59"
+                    placeholder="Phút">
                 <div id="endMinuteError" class="d-error form-text text-danger"></div>
-             </div>
+            </div>
+
             
         </div>
 
+        <button type="button" onclick="tinh()" class="btn btn-primary">Kết quả</button>
+        <div class="ketqua">
+            <table>
+                <tr>
+                    <td>
+                        Giá :
+                    </td>
+                    <td><b id="dongia">0</b>/Giờ</td>
+                </tr>
+                <tr>
+                    <td>
+                        Thời gian : 
+                    </td>
+                    <td>
+                        <b id="giochoi">00</b> giờ <b id="phutchoi">00</b> phút
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>Tổng :</b>
+                    </td>
+                    <td>
+                        <b id="thanhtien">0</b> VNĐ 
+                    </td>
+                </tr>
+
+            </table>
+
+
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
